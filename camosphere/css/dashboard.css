@@ -1,0 +1,97 @@
+/* ═══════════════════════════════════════
+   dashboard.css
+═══════════════════════════════════════ */
+
+.dashboard-page { padding: 36px; animation: fadeInUp 0.5s ease; }
+ 
+/* Info card */
+.info-card  { max-width: 600px; margin-bottom: 28px; display: flex; flex-direction: column; gap: 8px; }
+.info-heading { color: var(--blue); font-size: 1.05em; margin-bottom: 6px; letter-spacing: 0.5px; }
+.info-card p  { color: var(--dim-text); font-size: 0.95em; }
+.info-label   { color: var(--text); font-weight: 600; margin-right: 6px; }
+.logout-btn   { align-self: flex-start; margin-top: 4px; font-size: 0.85em; padding: 8px 16px; }
+.edit-own-btn { align-self: flex-start; font-size: 0.85em; padding: 8px 16px; color: var(--blue); border-color: var(--blue); }
+ 
+/* Admin stats */
+.admin-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  max-width: 640px;
+  margin-bottom: 28px;
+}
+.stat-card {
+  background-color: var(--card-bg); border: 1px solid var(--border);
+  border-radius: 10px; padding: 20px 16px;
+  text-align: center; display: flex; flex-direction: column; gap: 6px;
+}
+.stat-icon  { font-size: 2em; }
+.stat-value { font-size: 1.8em; font-weight: 700; color: var(--red); }
+.stat-label { font-size: 0.78em; color: var(--muted); }
+ 
+/* Feature grid */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 760px;
+}
+ 
+.feature-card-btn {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 28px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  color: var(--text);
+  transition: transform 0.2s, border-color 0.2s;
+}
+.feature-card-btn:hover {
+  transform: translateY(-4px);
+  border-color: var(--blue);
+}
+ 
+.fc-emoji { font-size: 2.4em; }
+.fc-title { font-size: 0.85em; font-weight: 700; letter-spacing: 0.5px; text-align: center; }
+ 
+/* Action buttons row inside card */
+.fc-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 4px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+ 
+.fc-btn {
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 0.8em;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+ 
+.fc-explore {
+  background: rgba(24, 123, 205, 0.12);
+  border: 1px solid rgba(24, 123, 205, 0.3);
+  color: var(--blue);
+}
+.fc-explore:hover {
+  background: var(--blue);
+  color: #fff;
+}
+ 
+.fc-manage {
+  background: rgba(228, 0, 70, 0.1);
+  border: 1px solid rgba(228, 0, 70, 0.3);
+  color: var(--red);
+}
+.fc-manage:hover {
+  background: var(--red);
+  color: #fff;
+}
+ 

@@ -1,0 +1,44 @@
+/* virtual-tour.css */
+.tour-page { padding: 36px; 
+    animation: fadeInUp 0.5s ease; }
+.tour-locations { display: flex; 
+    gap: 12px; 
+    flex-wrap: wrap;
+     margin-bottom: 28px; }
+.loc-btn { background: var(--card-bg); 
+    border: 1px solid var(--border); 
+    color: var(--text);
+     padding: 10px 20px; 
+     border-radius: 20px; 
+     font-family: Inter, system-ui, 'Segoe UI', Arial, sans-serif; 
+     font-size: 0.95em; 
+     font-weight: 600;
+      cursor: pointer; 
+      transition: all 0.2s; }
+.loc-btn:hover, .loc-btn.active { background: var(--blue);
+     border-color: var(--blue);
+      color: #fff; }
+.tour-viewer { max-width: 640px;
+     min-height: 360px; 
+     display: flex; 
+     align-items: center; 
+     justify-content: center; }
+.tour-viewer-inner { text-align: center; 
+    padding: 20px; }
+.tour-icon { font-size: 5em; 
+    margin-bottom: 20px; 
+    animation: popIn 0.4s ease; }
+.tour-loc-title { color: var(--blue);
+     font-family: Inter, system-ui, 'Segoe UI', Arial, sans-serif; 
+     font-size: 1.4em;
+      margin-bottom: 12px; }
+.tour-loc-desc  { color: var(--dim-text);
+     line-height: 1.7;
+      max-width: 480px; 
+      margin-bottom: 24px; }
+.tour-badge { background: rgba(0,191,255,0.1);
+     border: 1px solid rgba(0,191,255,0.3);
+      color: var(--cyan); 
+      padding: 10px 20px; 
+      border-radius: 8px; 
+      font-size: 0.9em; }

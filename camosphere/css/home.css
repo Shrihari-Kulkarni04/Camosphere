@@ -1,0 +1,161 @@
+/* ═══════════════════════════════════════
+   home.css — Home Page styles
+═══════════════════════════════════════ */
+
+/* ── Welcome Section ── */
+#welcome-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 60px 30px 40px;
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+#welcome-section.visible { opacity: 1; transform: translateY(0); }
+
+.welcome-title {
+font-family: Inter, system-ui, 'Segoe UI', Arial, sans-serif;
+  font-size: 2em;
+  color: var(--blue);
+  margin-bottom: 18px;
+  letter-spacing: 2px;
+}
+
+.welcome-desc {
+  color: var(--dim-text);
+  max-width: 680px;
+  line-height: 1.85;
+  font-size: 1.05em;
+  margin-bottom: 32px;
+}
+
+/* ── Get Started Button ── */
+.get-started-btn {
+  background-color: #1a1a1a;
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 16px 40px;
+  border-radius: 8px;
+ font-family: Inter, system-ui, 'Segoe UI', Arial, sans-serif;
+  font-size: 1.25em;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: background 0.25s, border-color 0.25s;
+}
+.get-started-btn:hover { background-color: #272727; border-color: var(--blue); }
+.gs-blue { color: var(--blue); }
+.gs-red  { color: var(--red);  }
+
+/* ── Role Selection ── */
+.role-selection { margin-top: 20px; animation: popIn 0.4s ease; }
+.role-title { color: var(--blue); margin-bottom: 20px; font-size: 1.2em; letter-spacing: 1px; }
+
+.role-grid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.role-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 24px 28px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  min-width: 110px;
+  font-size: 0.9em;
+  font-weight: 700;
+  letter-spacing: 1px;
+  transition: background 0.25s, border-color 0.25s, transform 0.2s;
+}
+.role-card:hover { background-color: var(--blue); border-color: var(--blue); transform: translateY(-4px); }
+.role-emoji { font-size: 2.4em; }
+
+/* ── Neon Logo ── */
+.neon-logo-wrapper {
+  position: relative;
+  width: 400px;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 28px;
+}
+.neon-svg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+.neon-path {
+  fill: none;
+  stroke-width: 4px;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 5s ease-in-out;
+}
+.blue-path { stroke: #000080; filter: drop-shadow(0 0 8px #0055ff) drop-shadow(0 0 18px #0033cc); }
+.red-path  { stroke: #800000; filter: drop-shadow(0 0 8px #ff0000) drop-shadow(0 0 18px #cc0000); }
+
+
+  .neon-logo-img {
+  position: relative;
+  z-index: 1;
+  width: 340px;
+  height: auto;
+  object-fit: contain;
+}
+
+
+/* ── Features Section ── */
+#features-section { padding: 20px 40px 60px; }
+
+.features-heading {
+font-family: Inter, system-ui, 'Segoe UI', Arial, sans-serif;
+  text-align: center;
+  color: var(--blue);
+  font-size: 1.7em;
+  margin-bottom: 40px;
+  letter-spacing: 1.5px;
+}
+
+.features-list {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.feature-card {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  background: linear-gradient(135deg, var(--card-bg), #0d2240);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px 28px;
+  animation: slideInLeft 0.6s ease both;
+}
+.feature-card.even { flex-direction: row-reverse; }
+
+.feature-icon {
+  font-size: 4em;
+  flex-shrink: 0;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+}
+
+.feature-content       { flex: 1; text-align: left;  }
+.feature-content.right { text-align: right;           }
+.feature-title { color: var(--red); font-size: 1.15em; margin-bottom: 8px; }
+.feature-desc  { color: var(--dim-text); line-height: 1.7; font-size: 0.95em; }

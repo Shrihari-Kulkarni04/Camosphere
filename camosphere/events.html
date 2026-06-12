@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Events - Camosphere</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+ <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@700;900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/global.css"/>
+  <link rel="stylesheet" href="css/events.css?v=event-bars-1"/>
+</head>
+<body>
+  <aside id="sidebar">
+    <div class="sidebar-logo"><span class="logo-text">CAMO<br/>SPHERE</span><span class="logo-sub">LIT SARIGAM</span></div>
+    <nav class="sidebar-nav"><ul>
+      <li><a href="index.html"        class="nav-btn"><span class="nav-icon">🏠</span><span class="nav-label">Home</span></a></li>
+      <li><a href="virtual-tour.html" class="nav-btn"><span class="nav-icon">🥽</span><span class="nav-label">Virtual Tour</span></a></li>
+      <li><a href="departments.html"  class="nav-btn"><span class="nav-icon">🏛️</span><span class="nav-label">Departments</span></a></li>
+      <li><a href="campus-map.html"   class="nav-btn"><span class="nav-icon">🗺️</span><span class="nav-label">Campus Map</span></a></li>
+      <li><a href="events.html"       class="nav-btn"><span class="nav-icon">📅</span><span class="nav-label">Event Calendar</span></a></li>
+      <li><a href="gauva-ai.html"     class="nav-btn"><span class="nav-icon">🤖</span><span class="nav-label">Gauva AI</span></a></li>
+    </ul></nav>
+    <div class="sidebar-footer"><p>© 2026</p><p>developed by Shreya Rai</p></div>
+  </aside>
+  <main id="main-content">
+    <div class="events-page">
+      <h2 class="page-heading">Event Calendar</h2>
+      <div class="calendar-container">
+        <div class="cal-header">
+          <div class="cal-controls">
+            <button class="btn btn-blue" id="prev-btn">Prev</button>
+          </div>
+          <h3 class="cal-month-title" id="month-title"></h3>
+          <button class="btn btn-blue" id="next-btn">Next</button>
+        </div>
+        <div class="cal-weekdays">
+          <div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div>
+        </div>
+        <div class="cal-grid" id="cal-grid">
+          <div class="cal-loading" id="cal-loading">Loading events...</div>
+        </div>
+        <div class="today-btn-container">
+          <button class="btn btn-blue" id="today-btn">Today</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Event Modal -->
+    <div id="event-modal" class="modal-overlay hidden">
+      <div class="modal-box">
+        <button class="modal-close" id="modal-close">×</button>
+        <div id="modal-body"></div>
+      </div>
+    </div>
+    <div id="modal-backdrop" class="popup-backdrop hidden"></div>
+  </main>
+  <script src="js/global.js?v=uniform-nav-4"></script>
+  <script src="js/supabase-config.js?v=supabase-events-1"></script>
+  <script src="js/events.js?v=event-bars-1"></script>
+</body>
+</html>

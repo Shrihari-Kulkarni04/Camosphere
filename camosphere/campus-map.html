@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Campus Map - Camosphere</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@700;900&display=swap" rel="stylesheet"/>
+
+  <link rel="stylesheet" href="css/global.css"/>
+  <link rel="stylesheet" href="css/campus-map.css"/>
+</head>
+
+<body>
+
+<!-- ===== SIDEBAR ===== -->
+<aside id="sidebar">
+  <div class="sidebar-logo">
+    <span class="logo-text">CAMO<br/>SPHERE</span>
+    <span class="logo-sub">LIT SARIGAM</span>
+  </div>
+
+  <nav class="sidebar-nav">
+    <ul>
+      <li><a href="dashboard.html" class="nav-btn"><span class="nav-icon">🏠</span><span class="nav-label">Dashboard</span></a></li>
+      <li><a href="virtual-tour.html" class="nav-btn"><span class="nav-icon">🥽</span><span class="nav-label">Virtual Tour</span></a></li>
+      <li><a href="departments.html" class="nav-btn"><span class="nav-icon">🏛️</span><span class="nav-label">Departments</span></a></li>
+      <li><a href="campus-map.html" class="nav-btn"><span class="nav-icon">🗺️</span><span class="nav-label">Campus Map</span></a></li>
+      <li><a href="events.html" class="nav-btn"><span class="nav-icon">📅</span><span class="nav-label">Events</span></a></li>
+      <li><a href="index.html" class="nav-btn"><span class="nav-icon">🚪</span><span class="nav-label">Logout</span></a></li>
+    </ul>
+  </nav>
+
+  <div class="sidebar-footer">
+    <p>© 2026</p>
+    <p>Developed by Shrihari</p>
+  </div>
+</aside>
+
+<!-- ===== MAIN ===== -->
+<main id="main-content">
+
+<div class="map-page">
+
+<h2 class="page-heading">Campus Map (2D)</h2>
+
+<div class="map-layout">
+
+<!-- LEFT BUTTON LIST -->
+<div class="map-list">
+
+<button class="map-list-btn active" data-key="A-0">Block A - Floor 0</button>
+<button class="map-list-btn" data-key="A-1">Block A – Floor 1</button>
+<button class="map-list-btn" data-key="A-2">Block A – Floor 2</button>
+
+<button class="map-list-btn" data-key="B-0">Block B – Floor 0</button>
+<button class="map-list-btn" data-key="B-1">Block B – Floor 1</button>
+<button class="map-list-btn" data-key="B-2">Block B – Floor 2</button>
+
+<button class="map-list-btn" data-key="C-0">Block C – Floor 0</button>
+<button class="map-list-btn" data-key="C-1">Block C – Floor 1</button>
+<button class="map-list-btn" data-key="C-2">Block C – Floor 2</button>
+
+<button class="map-list-btn" data-key="D-0">Block D – Floor 0</button>
+<button class="map-list-btn" data-key="D-1">Block D – Floor 1</button>
+<button class="map-list-btn" data-key="D-2">Block D – Floor 2</button>
+
+</div>
+
+<!-- RIGHT MAP DISPLAY -->
+<div class="map-display">
+
+<h3 class="map-display-title" id="map-title">
+Block A – Floor 0
+</h3>
+
+<div class="map-img-wrapper">
+
+<!-- 🔥 SVG WILL LOAD HERE -->
+<div id="map-container" class="map-img"></div>
+
+<!-- FALLBACK -->
+<div id="map-fallback" class="map-fallback" style="display:none;">
+  <span>🗺️</span>
+  <p id="map-fallback-label">Block A – Floor 0</p>
+  <small>Map not available</small>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</main>
+
+<script src="js/global.js?v=uniform-nav-4"></script>
+<script src="js/campus-map.js"></script>
+
+</body>
+</html>

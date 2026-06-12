@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Camosphere - LIT Sarigam</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+ <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@700;900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/global.css"/>
+  <link rel="stylesheet" href="css/home.css"/>
+</head>
+<body>
+
+  <!-- SIDEBAR -->
+  <aside id="sidebar">
+    <div class="sidebar-logo">
+      <span class="logo-text">CAMOSPHERE</span>
+      <span class="logo-sub">LIT SARIGAM</span>
+    </div>
+    <nav class="sidebar-nav">
+      <ul>
+        <li><a href="index.html"        class="nav-btn"><span class="nav-icon">🏠</span><span class="nav-label">Home</span></a></li>
+        <li><a href="virtual-tour.html" class="nav-btn"><span class="nav-icon">🥽</span><span class="nav-label">Virtual Tour</span></a></li>
+        <li><a href="departments.html"  class="nav-btn"><span class="nav-icon">🏛️</span><span class="nav-label">Departments</span></a></li>
+        <li><a href="campus-map.html"   class="nav-btn"><span class="nav-icon">🗺️</span><span class="nav-label">Campus Map</span></a></li>
+        <li><a href="events.html"       class="nav-btn"><span class="nav-icon">📅</span><span class="nav-label">Event Calendar</span></a></li>
+        <li><a href="gauva-ai.html"     class="nav-btn"><span class="nav-icon">🤖</span><span class="nav-label">Gauva AI</span></a></li>
+      </ul>
+    </nav>
+    <div class="sidebar-footer"><p>© 2026</p><p>Developed by Shreya Rai </p></div>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main id="main-content">
+
+    <!-- Welcome Section -->
+    <section id="welcome-section">
+      <div class="neon-logo-wrapper">
+        <svg id="neon-svg" class="neon-svg" viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg">
+          <path id="blue-path" class="neon-path blue-path" d="M 200 10 L 10 10 L 10 210 L 200 210" stroke-dasharray="700" stroke-dashoffset="700"/>
+          <path id="red-path"  class="neon-path red-path"  d="M 200 10 L 390 10 L 390 210 L 200 210" stroke-dasharray="700" stroke-dashoffset="700"/>
+        </svg>
+       <img src="images/logo.png" alt="Camosphere Logo" class="neon-logo-img"/>
+      </div>
+
+      <h1 class="welcome-title">Welcome to CAMOSPHERE</h1>
+      <p class="welcome-desc">
+        Camosphere is an application designed to provide an immersive
+        <span class="kw-blue">virtual experience</span> of our college campus. Explore various
+        <span class="kw-blue">departments</span>, <span class="kw-blue">facilities</span>,
+        and get a feel for the campus environment from anywhere in the world.
+      </p>
+
+      <button id="get-started-btn" class="get-started-btn">
+        <span class="gs-blue">Get</span><span class="gs-red"> Started</span>
+      </button>
+
+      <div id="role-selection" class="role-selection hidden">
+        <h3 class="role-title">What Describes You?</h3>
+        <div class="role-grid">
+          <a href="visitor-login.html" class="role-card"><span class="role-emoji">👤</span><span>VISITOR</span></a>
+          <a href="student-login.html" class="role-card"><span class="role-emoji">🎓</span><span>STUDENT</span></a>
+          <a href="teacher-login.html" class="role-card"><span class="role-emoji">👨‍🏫</span><span>TEACHER</span></a>
+          <a href="admin-login.html"   class="role-card"><span class="role-emoji">🔐</span><span>ADMIN</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features-section">
+      <h2 class="features-heading">Our Key Features</h2>
+      <div class="features-list">
+        <div class="feature-card"><div class="feature-icon">🌐</div><div class="feature-content"><h3 class="feature-title">360-Degree Exploration</h3><p class="feature-desc">Provides immersive visuals for users to explore the campus in full detail.</p></div></div>
+        <div class="feature-card even"><div class="feature-icon">🧭</div><div class="feature-content right"><h3 class="feature-title">Interactive Guide</h3><p class="feature-desc">Offers real-time assistance and guidance, making navigation intuitive and user-friendly.</p></div></div>
+        <div class="feature-card"><div class="feature-icon">🔍</div><div class="feature-content"><h3 class="feature-title">Object Recognition</h3><p class="feature-desc">Enables the app to provide instant and detailed information about campus landmarks and facilities.</p></div></div>
+        <div class="feature-card even"><div class="feature-icon">⚙️</div><div class="feature-content right"><h3 class="feature-title">LIT-Specific Customization</h3><p class="feature-desc">Tailored to meet the exact requirements of our institution, ensuring a personalized experience.</p></div></div>
+        <div class="feature-card"><div class="feature-icon">📡</div><div class="feature-content"><h3 class="feature-title">Offline Access (In Progress)</h3><p class="feature-desc">Future updates will include offline accessibility so the app works in areas with poor connectivity.</p></div></div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="js/global.js?v=uniform-nav-4"></script>
+  <script src="js/home.js?v=auth-guard-1"></script>
+</body>
+</html>
