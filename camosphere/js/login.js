@@ -163,23 +163,30 @@ document.addEventListener('DOMContentLoaded', function () {
       return;
     }
 
-    showMsg(msgEl, 'Checking faculty details...', 'success');
+    showMsg(msgEl, 'Checking teacher details...', 'success');
 
     const { data, error } = await db.maybeSingle(db.tables.faculty, {
-      email: formData.identifier
+      email: formData.identifier,
+      password: formData.password
     });
 
     if (error) {
-      showMsg(msgEl, cleanSupabaseError(error), 'error');
+      showMsg(msgEl, cleanTeacherLoginError(error), 'error');
       return;
     }
 
     if (!data) {
-      showMsg(msgEl, 'Faculty email not found.', 'error');
+      showMsg(msgEl, 'Invalid teacher email or password.', 'error');
       return;
     }
 
-    showMsg(msgEl, 'Faculty table has no password column yet. Add one or use Supabase Auth for secure faculty login.', 'error');
+    Session.set('user', {
+      role: 'teacher',
+      identifier: data.name || data.email,
+      email: data.email,
+      department: data.department || ''
+    });
+    redirectAfterLogin(msgEl);
   }
 
   async function saveVisitor(formData, msgEl) {
@@ -248,6 +255,18 @@ document.addEventListener('DOMContentLoaded', function () {
   function cleanSupabaseError(error) {
     if (error && error.message) return error.message;
     return 'Something went wrong while connecting to Supabase.';
+  }
+
+  function cleanTeacherLoginError(error) {
+    const message = error && error.message ? error.message : '';
+    const details = error && error.details ? error.details : '';
+    const combined = (message + ' ' + details).toLowerCase();
+
+    if (combined.includes('password') && combined.includes('does not exist')) {
+      return 'Your faculty table has no password column. Add password column in Supabase first.';
+    }
+
+    return cleanSupabaseError(error);
   }
 
   function setupPasswordToggles() {
