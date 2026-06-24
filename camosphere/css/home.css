@@ -159,3 +159,134 @@ font-family: Inter, system-ui, 'Segoe UI', Arial, sans-serif;
 .feature-content.right { text-align: right;           }
 .feature-title { color: var(--red); font-size: 1.15em; margin-bottom: 8px; }
 .feature-desc  { color: var(--dim-text); line-height: 1.7; font-size: 0.95em; }
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  #welcome-section {
+    padding: 48px 24px 36px;
+  }
+
+  .neon-logo-wrapper {
+    width: min(44vw, 380px);
+    height: auto;
+    aspect-ratio: 400 / 220;
+  }
+
+  .neon-logo-img {
+    width: 84%;
+  }
+
+  #features-section {
+    padding: 20px 28px 54px;
+  }
+
+  .feature-card {
+    gap: 22px;
+    padding: 22px 24px;
+  }
+
+  .feature-icon {
+    width: 88px;
+    height: 88px;
+    font-size: 3.4em;
+  }
+}
+
+@media (max-width: 768px) {
+  #welcome-section {
+    padding: 28px 18px 32px;
+  }
+
+  .welcome-title {
+    font-size: clamp(1.45rem, 6vw, 1.85rem);
+    letter-spacing: 1.2px;
+    line-height: 1.25;
+  }
+
+  .welcome-desc {
+    max-width: none;
+    font-size: 0.96em;
+    line-height: 1.7;
+    margin-bottom: 26px;
+  }
+
+  .get-started-btn {
+    width: min(100%, 286px);
+    min-height: 50px;
+    padding: 14px 22px;
+    font-size: 1.08em;
+  }
+
+  .role-selection {
+    width: 100%;
+  }
+
+  .role-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+  }
+
+  .role-card {
+    min-width: 0;
+    min-height: 116px;
+    padding: 18px 12px;
+    overflow-wrap: anywhere;
+  }
+
+  .role-emoji {
+    font-size: 2em;
+  }
+
+  .neon-logo-wrapper {
+    width: min(86vw, 330px);
+    height: auto;
+    aspect-ratio: 400 / 220;
+    margin-bottom: 22px;
+  }
+
+  .neon-logo-img {
+    width: 82%;
+  }
+
+  #features-section {
+    padding: 18px 14px 42px;
+  }
+
+  .features-heading {
+    font-size: 1.35em;
+    margin-bottom: 24px;
+  }
+
+  .features-list {
+    gap: 18px;
+  }
+
+  .feature-card,
+  .feature-card.even {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 20px 16px;
+    text-align: center;
+  }
+
+  .feature-content,
+  .feature-content.right {
+    text-align: center;
+  }
+
+  .feature-icon {
+    width: 82px;
+    height: 82px;
+    font-size: 3em;
+  }
+}
+
+@media (max-width: 360px) {
+  .role-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -94,4 +94,82 @@
   background: var(--red);
   color: #fff;
 }
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .dashboard-page {
+    padding: 28px;
+  }
+
+  .info-card,
+  .admin-stats,
+  .feature-grid {
+    max-width: none;
+  }
+
+  .admin-stats,
+  .feature-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-page {
+    padding: 24px 14px 32px;
+  }
+
+  .info-card,
+  .admin-stats,
+  .feature-grid {
+    max-width: none;
+    width: 100%;
+  }
+
+  .info-card p {
+    overflow-wrap: anywhere;
+  }
+
+  .logout-btn,
+  .edit-own-btn {
+    align-self: stretch;
+    text-align: center;
+  }
+
+  .admin-stats,
+  .feature-grid {
+    grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
+    gap: 14px;
+  }
+
+  .stat-card {
+    padding: 18px 12px;
+  }
+
+  .stat-value {
+    font-size: 1.55em;
+  }
+
+  .feature-card-btn {
+    min-height: 150px;
+    padding: 22px 14px 18px;
+  }
+
+  .fc-actions {
+    width: 100%;
+  }
+
+  .fc-btn {
+    flex: 1 1 92px;
+    min-height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 420px) {
+  .admin-stats,
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+}
  

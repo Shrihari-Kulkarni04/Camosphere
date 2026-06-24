@@ -276,17 +276,48 @@
   margin: 20px auto 0;
 }
 
-@media (max-width: 760px) {
+@media (min-width: 769px) and (max-width: 1024px) {
   .events-page {
-    padding: 24px 16px;
+    padding: 28px;
+  }
+
+  .calendar-container {
+    padding: 20px;
+  }
+
+  .cal-month-title {
+    font-size: 1.65em;
+  }
+
+  .cal-grid {
+    grid-template-rows: repeat(5, 104px);
+  }
+
+  .event-bar {
+    font-size: 0.72em;
+  }
+}
+
+@media (max-width: 768px) {
+  .events-page {
+    padding: 24px 14px 32px;
+  }
+
+  .calendar-container {
+    padding: 14px;
+    border-radius: 10px;
   }
 
   .cal-header {
     grid-template-columns: 1fr;
+    gap: 10px;
+    padding-bottom: 14px;
+    margin-bottom: 14px;
   }
 
   .cal-header > .btn:last-child {
     justify-self: stretch;
+    width: 100%;
   }
 
   .cal-controls {
@@ -296,20 +327,69 @@
   .cal-controls .btn,
   .cal-header > .btn:last-child {
     flex: 1;
+    min-height: 44px;
   }
 
   .cal-month-title {
-    font-size: 1.4em;
+    font-size: clamp(1.2rem, 5vw, 1.45rem);
+    order: -1;
   }
 
-.cal-grid {
-  display: grid;
-  grid-template-columns: repeat(7, minmax(0, 1fr));
-  grid-template-rows: repeat(6, 118px);
-}
-  .event-bar {
+  .cal-weekdays {
     font-size: 0.68em;
-    padding: 0 5px;
+    padding-bottom: 8px;
+  }
+
+  .cal-grid {
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    grid-template-rows: repeat(5, minmax(76px, 18vw));
+    border-radius: 9px;
+  }
+
+  .cal-cell {
+    padding: 4px;
+  }
+
+  .day-num {
+    top: 3px;
+    right: 3px;
+    font-size: 0.74em;
+    padding: 1px 3px;
+  }
+
+  .event-bar {
+    width: calc(100% - 4px);
+    height: 18px;
+    margin: calc(18px + (var(--lane) * 21px)) 2px 0;
+    padding: 0 3px;
+    border-radius: 4px;
+    font-size: 0.58em;
+    line-height: 18px;
+  }
+
+  .modal-box {
+    width: calc(100% - 28px);
+    padding: 26px 18px 22px;
+    max-height: 78dvh;
+  }
+
+  .modal-close {
+    top: 8px;
+    right: 12px;
+    min-height: 36px;
+    width: 36px;
+  }
+
+  .modal-event-head {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .modal-category {
+    align-self: flex-start;
+  }
+
+  #today-btn {
+    width: 100%;
   }
 }
-

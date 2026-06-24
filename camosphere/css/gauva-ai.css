@@ -157,3 +157,79 @@ font-family: Inter, system-ui, 'Segoe UI', Arial, sans-serif;
   letter-spacing: 0.5px;
   flex-shrink: 0;
 }
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .ai-page {
+    padding: 28px;
+  }
+
+  .chat-window {
+    max-height: 460px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ai-page {
+    min-height: calc(100dvh - 64px);
+    height: auto;
+    max-height: none;
+    padding: 24px 14px 32px;
+  }
+
+  .ai-header {
+    margin-bottom: 14px;
+  }
+
+  .ai-subtitle {
+    line-height: 1.55;
+  }
+
+  .chat-window {
+    min-height: 280px;
+    max-height: 42dvh;
+    padding: 14px;
+    gap: 12px;
+    border-radius: 10px;
+  }
+
+  .chat-msg {
+    gap: 9px;
+  }
+
+  .msg-avatar {
+    width: 32px;
+    height: 32px;
+    font-size: 1em;
+  }
+
+  .msg-bubble {
+    max-width: 82%;
+    padding: 10px 12px;
+    font-size: 0.92em;
+    line-height: 1.55;
+    overflow-wrap: anywhere;
+  }
+
+  .quick-suggestions {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 8px;
+  }
+
+  .suggestion-btn {
+    width: 100%;
+    min-height: 42px;
+    border-radius: 16px;
+    padding: 8px 12px;
+  }
+
+  .chat-input-area {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .send-btn {
+    width: 100%;
+    min-height: 46px;
+  }
+}

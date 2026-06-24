@@ -202,8 +202,110 @@
   display: block;
   font-style: normal;
 }
-@media (max-width: 720px) {
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .dept-page {
+    padding: 28px;
+  }
+
+  .program-grid,
+  .branch-grid,
+  .branch-detail {
+    max-width: none;
+  }
+
+  .program-card {
+    padding: 32px 24px;
+  }
+
+  .branch-card {
+    padding: 26px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .dept-page {
+    padding: 24px 14px 32px;
+  }
+
+  .dept-subheading {
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+
+  .program-grid,
+  .branch-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+    max-width: none;
+  }
+
+  .program-card,
+  .branch-card {
+    width: 100%;
+    min-height: 112px;
+    padding: 24px 18px;
+  }
+
+  .branch-detail {
+    max-width: none;
+    width: 100%;
+  }
+
+  .branch-detail-title {
+    font-size: 1.2em;
+    line-height: 1.35;
+  }
+
+  .branch-detail-desc {
+    line-height: 1.65;
+    margin-bottom: 20px;
+  }
+
+  .detail-actions {
+    gap: 8px;
+  }
+
+  .branch-tag,
+  .detail-action-btn {
+    min-height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow-wrap: anywhere;
+  }
+
+  .detail-action-btn {
+    flex: 1 1 calc(50% - 8px);
+  }
+
   .detail-info-grid { grid-template-columns: 1fr; }
+  .faculty-card { padding: 14px; }
+  .faculty-card-head {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .faculty-course {
+    align-self: flex-start;
+    white-space: normal;
+  }
+  .faculty-meta,
+  .faculty-meta-chips {
+    gap: 8px;
+  }
+  .faculty-meta-chips span,
+  .subject-pill,
+  .faculty-slots span {
+    overflow-wrap: anywhere;
+  }
   .faculty-subject-grid { grid-template-columns: 1fr; }
   .faculty-slots { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 420px) {
+  .detail-action-btn {
+    flex-basis: 100%;
+  }
 }

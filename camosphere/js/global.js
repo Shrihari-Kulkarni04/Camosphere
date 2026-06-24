@@ -165,6 +165,67 @@ function wireSidebarLogo() {
   });
 }
 
+function setupResponsiveSidebar() {
+  const sidebar = document.getElementById('sidebar');
+  if (!sidebar) return;
+
+  let toggle = document.querySelector('.sidebar-toggle');
+  if (!toggle) {
+    toggle = document.createElement('button');
+    toggle.type = 'button';
+    toggle.className = 'sidebar-toggle';
+    toggle.setAttribute('aria-label', 'Open navigation');
+    toggle.setAttribute('aria-controls', 'sidebar');
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.innerHTML = '<span></span><span></span><span></span>';
+    document.body.insertBefore(toggle, document.body.firstChild);
+  }
+
+  let backdrop = document.querySelector('.sidebar-backdrop');
+  if (!backdrop) {
+    backdrop = document.createElement('div');
+    backdrop.className = 'sidebar-backdrop';
+    document.body.appendChild(backdrop);
+  }
+
+  const mobileQuery = window.matchMedia('(max-width: 768px)');
+
+  function closeSidebar() {
+    document.body.classList.remove('sidebar-open');
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.setAttribute('aria-label', 'Open navigation');
+  }
+
+  function toggleSidebar() {
+    const isOpen = document.body.classList.toggle('sidebar-open');
+    toggle.setAttribute('aria-expanded', String(isOpen));
+    toggle.setAttribute('aria-label', isOpen ? 'Close navigation' : 'Open navigation');
+  }
+
+  toggle.addEventListener('click', toggleSidebar);
+  backdrop.addEventListener('click', closeSidebar);
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') {
+      closeSidebar();
+    }
+  });
+
+  document.querySelectorAll('.nav-btn').forEach(function (link) {
+    link.addEventListener('click', function () {
+      if (mobileQuery.matches) {
+        closeSidebar();
+      }
+    });
+  });
+
+  window.addEventListener('resize', function () {
+    if (!mobileQuery.matches) {
+      closeSidebar();
+    }
+  });
+}
+
 protectCurrentPage();
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -172,6 +233,7 @@ document.addEventListener('DOMContentLoaded', function () {
   renderSidebarFooter();
   wireSidebarNavigation();
   wireSidebarLogo();
+  setupResponsiveSidebar();
 
   if (LOGIN_PAGES.includes(currentFile) && Session.isLoggedIn()) {
     Session.clear();
