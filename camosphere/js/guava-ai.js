@@ -1,5 +1,5 @@
 // ═══════════════════════════════════════
-//  gauva-ai.js —  chatbot logic for LIT Sarigam website
+//  guava-ai.js —  chatbot logic for LIT Sarigam website
 // ═══════════════════════════════════════
 
 const RESPONSES = {

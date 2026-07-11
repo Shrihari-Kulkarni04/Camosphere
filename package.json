@@ -1,0 +1,25 @@
+{
+  "name": "camosphere",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shrihari-Kulkarni04/Camosphere.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Shrihari-Kulkarni04/Camosphere/issues"
+  },
+  "homepage": "https://github.com/Shrihari-Kulkarni04/Camosphere#readme",
+  "dependencies": {
+    "@google/genai": "^2.11.0",
+    "@supabase/supabase-js": "^2.110.2",
+    "dotenv": "^17.4.2"
+  }
+}
