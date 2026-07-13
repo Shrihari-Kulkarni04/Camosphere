@@ -1,5 +1,5 @@
 // ═══════════════════════════════════════
-//  guava-ai.js —  chatbot logic for LIT Sarigam website
+//  guava-ai.js — chatbot logic for LIT Sarigam website
 // ═══════════════════════════════════════
 
 const RESPONSES = {
@@ -52,12 +52,33 @@ function sendMessage(text) {
   addMessage(text, 'user');
   document.getElementById('chat-input').value = '';
   document.getElementById('quick-suggestions').style.display = 'none';
+  console.log("sendMessage called");
 
   showTyping();
-  setTimeout(function () {
-    hideTyping();
-    addMessage(getBotResponse(text), 'bot');
-  }, 900);
+
+fetch("/api/chat", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify({
+    message: text,
+  }),
+})
+.then((response) => response.json())
+.then((data) => {
+  hideTyping();
+
+  if (data.success) {
+    addMessage(data.message, "bot");
+  } else {
+    addMessage("Something went wrong.", "bot");
+  }
+})
+.catch(() => {
+  hideTyping();
+  addMessage("Unable to connect to AI server.", "bot");
+});
 }
 
 document.addEventListener('DOMContentLoaded', function () {
