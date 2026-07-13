@@ -55,7 +55,7 @@ function sendMessage(text) {
   console.log("sendMessage called");
 
   showTyping();
-
+  console.log("Calling /api/chat");
 fetch("/api/chat", {
   method: "POST",
   headers: {
