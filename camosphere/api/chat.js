@@ -1,27 +1,36 @@
-import { GoogleGenAI } from "@google/genai";
+import { GoogleGenerativeAI } from "@google/generative-ai";
 
-const ai = new GoogleGenAI({
-    apiKey: process.env.GEMINI_API_KEY,
-});
+const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
 export default async function handler(req, res) {
-    try {
-        const response = await ai.models.generateContent({
-            model: "gemini-2.5-flash",
-            contents: "Say 'Camosphere AI is connected successfully.'",
-        });
+  if (req.method !== "POST") {
+    return res.status(405).json({
+      success: false,
+      error: "Method Not Allowed",
+    });
+  }
 
-        res.status(200).json({
-            success: true,
-            response: response.text,
-        });
+  try {
+    const { message } = req.body;
 
-    } catch (error) {
-        console.error(error);
+    const model = genAI.getGenerativeModel({
+      model: "gemini-2.5-flash",
+    });
 
-        res.status(500).json({
-            success: false,
-            error: error.message,
-        });
-    }
+    const result = await model.generateContent(message);
+    const response = result.response.text();
+
+    return res.status(200).json({
+      success: true,
+      message: response,
+    });
+
+  } catch (error) {
+    console.error(error);
+
+    return res.status(500).json({
+      success: false,
+      error: error.message,
+    });
+  }
 }

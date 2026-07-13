@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/Shrihari-Kulkarni04/Camosphere#readme",
   "dependencies": {
-    "@google/genai": "^2.11.0",
+    "@google/generative-ai": "^0.24.1",
     "@supabase/supabase-js": "^2.110.2",
     "dotenv": "^17.4.2"
   }
