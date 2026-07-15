@@ -19,7 +19,7 @@ camosphere/
 ├── campus-map.html         ← 2D Campus Map
 ├── events.html             ← Event Calendar
 ├── virtual-tour.html       ← 3D Virtual Tour
-├── gauva-ai.html           ← Gauva AI Chatbot
+├── guava-ai.html           ← Gauva AI Chatbot
 │
 ├── css/
 │   ├── global.css          ← Shared styles (sidebar, variables, reset)
@@ -30,7 +30,7 @@ camosphere/
 │   ├── campus-map.css
 │   ├── events.css
 │   ├── virtual-tour.css
-│   └── gauva-ai.css
+│   └── guava-ai.css
 │
 ├── js/
 │   ├── global.js           ← Shared logic (active nav, session helpers)
@@ -41,7 +41,7 @@ camosphere/
 │   ├── campus-map.js
 │   ├── events.js
 │   ├── virtual-tour.js
-│   └── gauva-ai.js
+│   └── guava-ai.js
 │
 └── images/
     └── map 2d/             ← Floor map images (A-0.jpeg, A-1.jpeg ... D-2.jpeg)
@@ -77,7 +77,7 @@ index.html (Home)
                     ├── campus-map.html
                     ├── events.html
                     ├── virtual-tour.html
-                    └── gauva-ai.html
+                    └── guava-ai.html
 ```
 
 ---
@@ -114,7 +114,7 @@ D-0.jpeg, D-1.jpeg, D-2.jpeg
 ## 🤖 Gauva AI (Coming Soon)
 
 Currently uses pre-written responses. Real AI integration planned using Anthropic API.  
-File to update: `js/gauva-ai.js`
+File to update: `js/guava-ai.js`
 
 ---
 

@@ -25,7 +25,7 @@ const PROTECTED_PAGES = [
   'departments.html',
   'campus-map.html',
   'events.html',
-  'gauva-ai.html'
+  'guava-ai.html'
 ];
 
 const LOGIN_PAGES = [
@@ -42,7 +42,7 @@ const SIDEBAR_NAV_ITEMS = [
   { label: 'Departments', href: 'departments.html', icon: '&#127963;&#65039;', protected: true, public: true },
   { label: 'Campus Map', href: 'campus-map.html', icon: '&#128506;&#65039;', protected: true, public: true },
   { label: 'Events', href: 'events.html', icon: '&#128197;', protected: true, public: true },
-  { label: 'Gauva AI', href: 'gauva-ai.html', icon: '&#129302;', protected: true, public: true },
+  { label: 'Guava AI', href: 'guava-ai.html', icon: '&#129302;', protected: true, public: true },
   { label: 'Logout', href: 'index.html', icon: '&#128682;', logout: true }
 ];
 

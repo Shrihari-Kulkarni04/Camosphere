@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // 1. Fade in welcome section
   const welcomeSection = document.getElementById('welcome-section');
-  setTimeout(function () { welcomeSection.classList.add('visible'); }, 100);
+  setTimeout(function () { welcomeSection.classList.add('visible'); }, 50);
 
   // 2. Neon box animation
   const bluePath = document.getElementById('blue-path');

@@ -229,7 +229,7 @@ document.addEventListener('DOMContentLoaded', function () {
       'departments.html',
       'campus-map.html',
       'events.html',
-      'gauva-ai.html'
+      'guava-ai.html'
     ];
     const nextPage = new URLSearchParams(window.location.search).get('next');
 
