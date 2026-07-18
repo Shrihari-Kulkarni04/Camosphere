@@ -304,7 +304,9 @@ async function getLocalVectorIndex() {
     return existing;
   }
 
-  return buildLocalVectorIndex();
+  throw new Error(
+  "Local PDF fallback is disabled. Configure Supabase vector search instead."
+);
 }
 
 async function matchLocalDocuments(queryEmbedding, options = {}) {
@@ -391,7 +393,9 @@ async function getLocalTextIndex() {
     return existing;
   }
 
-  return buildLocalTextIndex();
+throw new Error(
+  "Local PDF fallback is disabled."
+);
 }
 
 async function matchLocalTextDocuments(queryText, options = {}) {
