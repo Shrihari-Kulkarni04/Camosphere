@@ -1,6 +1,5 @@
 const fs = require("fs");
 const path = require("path");
-const pdf = require("pdf-parse");
 
 function loadEnv() {
   if (process.env.VERCEL) return;
