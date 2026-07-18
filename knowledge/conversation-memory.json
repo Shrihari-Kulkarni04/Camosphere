@@ -1,0 +1,85 @@
+{
+  "version": 1,
+  "conversations": {
+    "::1": {
+      "id": "640e8e01-d3ae-454e-ad16-887096b5be54",
+      "session_id": "::1",
+      "created_at": "2026-07-18T00:42:56.129Z",
+      "updated_at": "2026-07-18T01:10:08.798Z",
+      "messages": [
+        {
+          "id": "c4ea7cd7-41f7-445c-af59-46358bee05c9",
+          "role": "user",
+          "content": "Who is shrihari",
+          "created_at": "2026-07-18T00:42:56.726Z"
+        },
+        {
+          "id": "4b248f91-d668-4373-833b-8cd8cb991a89",
+          "role": "assistant",
+          "content": "I couldn't understand exactly what you are referring to. Could you please provide a little more detail so I can assist you better?",
+          "created_at": "2026-07-18T00:42:56.762Z"
+        },
+        {
+          "id": "b05a60a2-7a94-4c73-8d67-1fe54343cd6f",
+          "role": "user",
+          "content": "who is priyaka datta",
+          "created_at": "2026-07-18T00:43:04.716Z"
+        },
+        {
+          "id": "2b0d8d65-848b-4b23-bc5d-19803b29e234",
+          "role": "assistant",
+          "content": "Dr. Priyanka Datta is an Assistant Professor in the Computer Science & Engineering department at Laxmi Institute of Technology (LIT). Her cabin/office is located at B123, and she can be reached via email at priyankadatta.lit@laxmi.edu.in.",
+          "created_at": "2026-07-18T00:43:04.814Z"
+        },
+        {
+          "id": "c3dcc9eb-8c12-4c11-9a5b-fc5022c3d976",
+          "role": "user",
+          "content": "vrunda patel kon chee",
+          "created_at": "2026-07-18T00:43:21.199Z"
+        },
+        {
+          "id": "00d9f42b-c097-47fc-b98e-be081b49a2f2",
+          "role": "assistant",
+          "content": "I couldn't understand exactly what you are referring to. Could you please provide a little more detail or clarify the question about Vrunda Patel so I can assist you better?",
+          "created_at": "2026-07-18T00:43:21.273Z"
+        },
+        {
+          "id": "350f0b5b-22a7-4b66-aec0-5ddda2b1497f",
+          "role": "user",
+          "content": "vrunda patel kon hai?",
+          "created_at": "2026-07-18T00:43:31.885Z"
+        },
+        {
+          "id": "663dd5cc-dc7c-4a1e-bb2f-32c5dd6b1219",
+          "role": "assistant",
+          "content": "I couldn't find any information about Vrunda Patel. Could you please provide more context or details about Vrunda Patel so I can assist you better?",
+          "created_at": "2026-07-18T00:43:31.951Z"
+        },
+        {
+          "id": "a6f22257-0dfc-463a-83cb-f12599c2eec0",
+          "role": "user",
+          "content": "vrunda patel kon hai",
+          "created_at": "2026-07-18T01:01:44.064Z"
+        },
+        {
+          "id": "87469786-518c-4135-9702-0dacf3cfda4b",
+          "role": "assistant",
+          "content": "I couldn't understand exactly what you are referring to. Could you please provide a little more detail or clarify the question about Vrunda Patel so I can assist you better?",
+          "created_at": "2026-07-18T01:01:44.166Z"
+        },
+        {
+          "id": "7bec903b-d449-4947-8562-3959aab6e915",
+          "role": "user",
+          "content": "How do I find the campus map?",
+          "created_at": "2026-07-18T01:10:08.684Z"
+        },
+        {
+          "id": "9f736bf3-86c7-4cec-8e0c-45f2c1d91ad4",
+          "role": "assistant",
+          "content": "Unfortunately, I don't have the specific information about the campus map. However, I can suggest that you might be able to find it through the LIT website or by contacting the administration office. They should be able to provide you with the necessary information or direct you to the right resource.",
+          "created_at": "2026-07-18T01:10:08.798Z"
+        }
+      ]
+    }
+  }
+}
